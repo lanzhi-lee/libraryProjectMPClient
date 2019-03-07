@@ -1,0 +1,52 @@
+<view class="page">
+
+  <view class="page__hd head_container">
+
+    <view class='weui-cell_select select_item_container' bindtap='select_date'>
+      <text class='select_item_title'>请选择日期：</text>
+      <text class='select_item_body'>{{currentDate}}</text>
+      <image class='last_arrows' src='/images/icon_arrow.png'></image>
+    </view>
+
+    <view class='weui-cell_select select_item_container' bindtap='select_time'>
+      <text class='select_item_title'>请选择时间：</text>
+      <view class='select_item_body picker_container'>
+        <!-- 111 -->
+        <!-- <view>111</view> -->
+      <picker range='{{startRange}}' value='{{startIndex}}' bindchange='startChange'>{{startRange[startIndex]}}</picker>
+
+      <text>  -  </text>
+
+        <picker range='{{finishRange}}' value='{{finishIndex}}' bindchange='finishChange'>{{finishRange[finishIndex]}}</picker>
+        <!-- {{currentTime}}{{latestTime}} -->
+
+      </view>
+      <image class='last_arrows' src='/images/icon_arrow.png'></image>
+    </view>
+
+    <view id='last_title' class='weui-cell_select select_item_container'>
+      <text class='select_item_title'>请选择座位：</text>
+      <text class='select_item_body last_select_item_body'>预览</text>
+    </view>
+
+  </view>
+
+  <view class="page__bd body_container">
+
+    <scroll-view id='seat_select_container'>
+      <view class="weui-grids">
+        <!-- wx:if="{{item.seatStatus=='free'}}" 0306更新，不再校验座位状态，全部进行展示 -->
+        <block wx:for="{{list}}" wx:key="key">
+
+          <!-- {{item.seatStatus=='free'?'free':item.seatStatus=='booked'?'booked':'deprecated'}} -->
+          <!-- {{item.index}} -->
+          <view id='{{item.seatNumber}}' class="weui-grid" hover-class="weui-grid_active" bindtap='itemclick'>
+            <image class="weui-grid__icon" src='/images/seat-full.png' />
+            <view class="weui-grid__label">{{item.seatNumber}}</view>
+          </view>
+
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+</view>

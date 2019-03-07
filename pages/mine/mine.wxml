@@ -1,0 +1,71 @@
+<!--pages/mine/mine.wxml-->
+<block wx:if='{{!orderExist}}'>
+
+  <view id='tips-body'>
+
+    <image id='icon_warn' src='/images/icon_warn.png'></image>
+
+    <view id='tips-container'>
+      <view id='tips'>
+        <text>当前无座位信息</text>
+        <text>请预约座位后下拉刷新重试</text>
+      </view>
+    </view>
+  </view>
+
+</block>
+
+<block wx:if='{{orderExist}}'>
+
+  <view class='body'>
+
+    <view class='info_content'>
+      <view>预约位置：</view>
+      <text>{{orderInfo.location}}</text>
+      <!-- <text>{{building}}</text>
+      <text>{{storey}}</text> -->
+    </view>
+
+    <view class='info_content'>
+      <view>预约区域：</view>
+      <text>{{orderInfo.room}}</text>
+    </view>
+
+    <view class='info_content'>
+      <view>座位编号：</view>
+      <text>{{orderInfo.seatid}}</text>
+    </view>
+
+    <view class='info_content'>
+      <view>预约时间：</view>
+      <text>{{orderInfo.time}}</text>
+    </view>
+
+    <view class='info_content'>
+      <view>使用人员：</view>
+      <text>{{orderInfo.user}}</text>
+    </view>
+
+
+  </view>
+
+  <view class="page">
+
+    <view class="page__bd page__bd_spacing">
+      <view class="button-sp-area btn-container">
+
+        <block wx:if='{{btn_showFlag}}'>
+          <button class="weui-btn" type="primary" id='first-btn' bindtap='userSignIn'>签到</button>
+        </block>
+
+        <block wx:if='{{!btn_showFlag}}'>
+          <view></view>
+          <button class="weui-btn" type="warn" id='last-btn' bindtap='userEnd'>结束使用</button>
+          <button class="weui-btn" type="default" id='second-btn' bindtap='userLeave'>暂时离开</button>
+        </block>
+
+      </view>
+    </view>
+
+  </view>
+</block>

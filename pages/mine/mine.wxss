@@ -1,0 +1,70 @@
+/* pages/mine/mine.wxss */
+
+#icon_warn {
+  width: 150rpx;
+  height: 150rpx;
+  margin-bottom: 5%;
+}
+
+#tips-body {
+  height: 800rpx;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#tips-container {
+  justify-content: center;
+}
+
+#tips {
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: bolder;
+}
+
+#tips text {
+  display: block;
+}
+
+.body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+}
+
+.info_content {
+  font-size: 32rpx;
+  padding: 20rpx 0 20rpx 20rpx;
+  border-bottom: 1rpx solid #ddd;
+  display: flex;
+}
+
+.info_content view {
+  padding-right: 10rpx;
+}
+
+.info_content text {
+  display: inline-block;
+  margin-right: 16rpx;
+}
+
+.btn-container {
+  margin-top: 5%;
+  display: flex;
+  flex-flow: row;
+}
+
+#first-btn {
+  width: 60%;
+}
+
+#second-btn, #last-btn {
+  width: 41%;
+  margin-top: 0;
+}

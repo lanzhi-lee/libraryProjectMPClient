@@ -1,0 +1,16 @@
+<view class='select_box'>
+  <view class='select' catchtap='selectTap'>
+    <text class='select_text'>{{selectData[index]}}</text>
+    <image class='select_img {{show && "select_img_rotate"}}' src='/images/arrow_down.png'></image>
+  </view>
+  <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+    <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+  </view>
+</view>
+<!--
+  show&&"select_img_rotate"-----给显示框右边的下拉箭头添加动画
+
+  height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;-----给改变下拉框高度，实现下拉框的显示隐藏，每个下拉选项的高度为60，下拉框的最大高度这里设置的是300，所以这里写成当数据长度大于5时，下拉框高度为300，反之下拉框高度为数据长度乘以60
+
+  index==selectData.length-1&&"border:0;"-----取消下拉选项的最后一个的下边框
+  -->

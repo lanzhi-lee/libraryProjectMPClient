@@ -1,0 +1,95 @@
+<!--index.wxml-->
+<view class="page">
+
+  <view class="page__bd">
+
+    <view class="weui-cells__title select-title">
+      <view class=''>请选择座位区域：</view>
+    </view>
+
+    <view class="weui-cells weui-cells_after-title">
+
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+          <view class="weui-label">校区</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker bindchange="bindCampusChange" value="{{campusIndex}}" range="{{campus}}">
+            <view class="weui-select weui-select_in-select-after {{campusIndex?'':'select-text'}}">
+              {{campus[campusIndex]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+          <view class="weui-label">建筑</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker bindchange="bindBuildingsChange" value="{{buildingIndex}}" range="{{buildings}}">
+            <view class="weui-select weui-select_in-select-after {{buildingIndex?'':'select-text'}}">
+              {{buildings[buildingIndex]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+          <view class="weui-label">楼层</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker bindchange="bindStoreyChange" value="{{storeyIndex}}" range="{{storeys}}">
+            <view class="weui-select weui-select_in-select-after {{storeyIndex?'':'select-text'}}">
+              {{storeys[storeyIndex]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+          <view class="weui-label">区域</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker bindchange="bindRegionsChange" value="{{regionsIndex}}" range="{{regions}}">
+            <view class="weui-select weui-select_in-select-after {{regionsIndex?'':'select-text'}}">
+              {{regions[regionsIndex]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+
+    </view>
+
+    <button id='queryBtn' class="weui-btn" type="primary" bindtap='queryRoomList'>查询当前区域</button>
+
+  </view>
+
+</view>
+
+
+
+
+<!-- <view class="cu-bar bg-white margin-top">
+  <view class='action'>
+    <text class='icon-title text-orange '></text> 侧边抽屉
+  </view>
+  <view class='action'>
+    <button class='cu-btn bg-green shadow' bindtap="showModal" data-target="DrawerModalL">Left</button>
+    <button class='cu-btn bg-blue shadow margin-left' bindtap="showModal" data-target="DrawerModalR">Right</button>
+  </view>
+</view> -->
+
+<!-- <view class="cu-modal drawer-modal justify-start {{modalName=='DrawerModalL'?'show':''}}" bindtap='hideModal'>
+  <view class="cu-dialog basis-lg" catchtap style="top:{{CustomBar}}px;">
+    <view class='cu-list menu text-left'>
+      <view class='cu-item arrow' wx:for="{{5}}" wx:key>
+        <view class='content'>
+          <view>Item {{index +1}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view> -->

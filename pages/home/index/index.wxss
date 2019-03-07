@@ -1,0 +1,48 @@
+/**index.wxss**/
+/* @import "../common/dd-menu.wxss"; */
+
+/* .page{
+  position: relative;
+  top: 300rpx;
+} */
+#queryBtn{
+  width: 60%;
+  margin-top: 15%;
+}
+
+
+.select-title {
+  margin: 0;
+  /* color: black; */
+  color: var(--color);
+  height: 70rpx;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+.select-text {
+  color: #a2a2a2;
+}
+
+.seat-green {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+
+.test {
+  width: 100rpx;
+  height: 100rpx;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.test text {
+  border: 1px solid black;
+}
+
+/* "/iamges/seat-gray.png" */

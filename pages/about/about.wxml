@@ -1,0 +1,38 @@
+<!--pages/user/examnotes/examnotes.wxml-->
+<view class='body'>
+  <view class="weui-article">
+    <view class="weui-article__h1" style='font-weight: bold'>选座系统使用注意事项</view>
+    <view class="weui-article__section">
+      <view class="weui-article__section">
+        <view class="weui-article__p">
+          考生考试违纪作弊行为应以监考人员现场认定的事实为依据。考试过程中发现违纪作弊情况，监考人员应按以下程序处理：
+        </view>
+
+        <view class="weui-article__p">
+          1. 终止其该课程的考试，在试卷上标明“违纪”或“作弊”字样；
+        </view>
+
+        <view class="weui-article__p">
+          2. 收缴其试卷，收集并保留好与其违纪作弊相关的材料及物品,必要时对与作弊行为密切相关的证据要拍照留证（对手机截屏、替考者等相关证据拍照留证）；
+        </view>
+        
+      </view>
+
+      <view class="weui-article__section">
+        <view class="weui-article__h1" style='font-weight: bold'>关于</view>
+
+        <view class="weui-article__p">
+          1. 考生违纪作弊行为有实物证据的，要保留好实物，无实物证据的，要依据事实写出考生违纪作弊的书面情况说明，注意用清晰、无歧义的语言说明具体情节；
+        </view>
+
+        <view class="weui-article__p">
+          2. 考生自带与考试相关的纸条、笔记、书等物品者，要让考生在纸条等物品上签名；
+        </view>
+
+        
+      </view>
+    </view>
+    
+  </view>
+
+</view>

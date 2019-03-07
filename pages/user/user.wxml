@@ -1,0 +1,57 @@
+<!--miniprogram/pages/user/user.wxml-->
+
+<view class="page">
+  <view class="page__bd">
+
+    <view class="weui-media-box weui-media-box_appmsg">
+      <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+        <view id='index-userimg-container'>
+          <open-data type="userAvatarUrl" id='index-userimg' style=""></open-data>
+        </view>
+      </view>
+    </view>
+
+
+    <view class="weui-panel weui-panel_access details-bd">
+
+      <view class="weui-panel__bd">
+
+        <view class="weui-cell weui-cell_access list-items" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="/images/userImgDefault.png" style="width: 20px;height: 20px;margin-right: 5px" />
+          </view>
+          <view class="weui-cell__bd weui-cell_primary ">
+            <view class='list-title'>姓名</view>
+            <view class='list-content'>{{userinfo.name}}</view>
+          </view>
+        </view>
+
+
+        <view class="weui-cell weui-cell_access list-items" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="/images/details-college.png" style="width: 20px;height: 20px;margin-right: 5px" />
+          </view>
+          <view class="weui-cell__bd weui-cell_primary ">
+            <view class='list-title'>学院</view>
+            <view class='list-content'>{{userinfo.college}}</view>
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_access list-items" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="/images/details-major.png" style="width: 20px;height: 20px;margin-right: 5px" />
+          </view>
+          <view class="weui-cell__bd weui-cell_primary ">
+            <view class='list-title'>专业</view>
+            <view class='list-content'>{{userinfo.major}}</view>
+          </view>
+        </view>
+
+      </view>
+
+    </view>
+
+    <button class='weui-btn logout_btn' type="warn" bindtap='logout'>退出登录</button>
+
+  </view>
+</view>

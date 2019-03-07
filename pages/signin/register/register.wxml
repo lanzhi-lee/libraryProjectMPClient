@@ -1,0 +1,106 @@
+<view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{topTips}}</view>
+<!-- [topTipsIndex] -->
+
+<view>
+  <form bindsubmit="loginCheck">
+    <view class="weui-cells__title">注册并登陆</view>
+
+
+    <view class="weui-cells weui-cells_after-title">
+
+      <!-- 姓名 -->
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">姓名</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input id='0' class="weui-input" type='text' name="username" placeholder="请输入姓名" bindchange="bindInputChange" />
+        </view>
+      </view>
+
+      <!--学号 -->
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">学号</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input id='1' class="weui-input" type='text' name="schoolnum" placeholder="请输入学号" bindchange="bindInputChange"/>
+        </view>
+      </view>
+
+      <!--密码 -->
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">密码</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input id='2' class="weui-input" type='text' name="password" password='true' placeholder="请输入密码" bindchange="bindInputChange" />
+        </view>
+      </view>
+
+      <!--性别 -->
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+          <view class="weui-label">性别</view>
+        </view>
+        <radio-group class="sex-radio-group" name="sex" bindchange="bindSexChange">
+          <!-- <view></view> -->
+          <label class="weui-cell weui-check__label" wx:for="{{sexItems}}" wx:key="value">
+            <radio class="weui-check" value="{{item.value}}" checked="{{item.checked}}" />
+
+            <view class="weui-cell__bd sex-container">
+              <view>{{item.name}}</view>
+              <image wx:if="{{item.checked}}" id='sex-checkmark' src='/images/icon_checkmark.png'></image>
+            </view>
+
+          </label>
+        </radio-group>
+      </view>
+
+      <!-- 学院 -->
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">学院</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input id='3' class="weui-input" type='text' name="college" placeholder="请输入学院" bindchange="bindInputChange" />
+        </view>
+      </view>
+
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">专业</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input id='4' class="weui-input" type='text' name="major" placeholder="请输入专业" bindchange="bindInputChange" />
+        </view>
+      </view>
+
+    </view>
+
+    <checkbox-group bindchange="bindAgreeChange" name='isAgree'>
+      <label class="weui-agree" for="weuiAgree">
+        <view class="weui-agree__text">
+          <checkbox class="weui-agree__checkbox" id="weuiAgree" value="agree" checked="{{isAgree}}" />
+          <view class="weui-agree__checkbox-icon">
+            <icon class="weui-agree__checkbox-icon-check" type="success_no_circle" size="9" wx:if="{{isAgree}}"></icon>
+          </view>
+          已阅读并同意
+          <navigator url="../userprotocol/userprotocol" class="weui-agree__link">《用户使用须知》</navigator>
+        </view>
+      </label>
+    </checkbox-group>
+
+    <button class='weui-btn submitBtn' type="primary" formType="submit">注册</button>
+
+  </form>
+</view>
+
+
+<!-- <view class="weui-footer weui-footer_fixed-bottom">
+  <view class="weui-footer__links">
+    <navigator url="http://henu.edu.cn" class="weui-footer__link" style='color: #999'>河南大学</navigator>
+    <navigator url="http://software.henu.edu.cn" class="weui-footer__link" style='color: #999'>河南大学软件学院</navigator>
+  </view>
+  <view class="weui-footer__text">Copyright © 河南大学软件学院 GC工作室</view>
+</view> -->

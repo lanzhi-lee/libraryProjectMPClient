@@ -1,0 +1,54 @@
+<view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{topTips}}</view>
+<!-- [topTipsIndex] -->
+
+<view>
+
+  <form bindsubmit="loginCheck">
+
+    <view class="weui-cells__title">身份信息</view>
+
+    <!--账号 -->
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">学号</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input id='1' class="weui-input" type='text' name="username" placeholder="请输入学号" bindchange="bindInputChange" />
+        </view>
+      </view>
+
+      <!--密码 -->
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">密码</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input id='2' class="weui-input" type='text' name="password" password='true' placeholder="请输入密码" bindchange="bindInputChange" />
+        </view>
+      </view>
+
+    </view>
+
+    <button class='weui-btn submitBtn' type="primary" formType="submit" id='login'>登录</button>
+    <!-- <button class='weui-btn' type="primary" formType="submit" id='login'>登录</button> -->
+
+  </form>
+</view>
+
+<view id='tonext_container'>
+  <text>尚未注册？</text>
+  <navigator url='/pages/signin/register/register' hover-class='none'>注册</navigator>
+</view>
+
+
+<!-- <view class="weui-footer weui-footer_fixed-bottom">
+  <view class="weui-footer__links">
+    <navigator url="http://henu.edu.cn" class="weui-footer__link" style='color: #999'>河南大学</navigator>
+    <navigator url="http://software.henu.edu.cn" class="weui-footer__link" style='color: #999'>河南大学软件学院</navigator>
+  </view>
+  <view class="weui-footer__text">Copyright © 河南大学软件学院 GC工作室</view>
+</view> -->
+
+<!-- <button bindtap='login'>test login</button>
+<button bindtap='register'>test register</button> -->

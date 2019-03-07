@@ -1,0 +1,31 @@
+<!-- <view class='modal-container'>
+  <view class='modal-body'>
+    <view class='nodal-title'>即将预约</view>
+    <view class='nodal-content'>2019-03-08</view>
+    <view class='nodal-content'>08:00-22:00</view>
+    <view class='modal-btns'>
+      <view class='modal-cancle-btn'>取消</view>
+      <view class='modal-confirm-btn'>确定</view>
+    </view>
+  </view>
+</view> -->
+
+<!-- <web-view src="https://720yun.com/t/7b723wbOub6?scene_id=67793"></web-view> -->
+
+<view>
+  <view>
+
+    <view>
+      <picker range='{{startRange}}' value='{{startIndex}}' bindchange='startChange'>{{startRange[startIndex]}}</picker>
+    </view>
+
+    <view>
+      <picker range='{{startRange}}' value='{{startIndex}}' bindchange='startChange'>{{startRange[startIndex]}}</picker>
+    </view>
+
+    <view>
+      <picker range='{{finishRange}}' value='{{finishIndex}}' bindchange='finishChange'>{{finishRange[finishIndex]}}</picker>
+    </view>
+    
+  </view>
+</view>

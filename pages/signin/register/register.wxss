@@ -1,0 +1,33 @@
+/* pages/login/login.wxss */
+@import '../common.wxss';
+
+.sex-radio-group {
+  /* border: 1px solid red; */
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+}
+
+.sex-radio-group label {
+  display: inline-block;
+  /* border: 1px solid black; */
+
+  width: 20%;
+  margin-right: 5%;
+  padding-left: 0;
+  /* height: 90rpx; */
+}
+
+.sex-container {
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+}
+
+#sex-checkmark {
+  width: 40rpx;
+  height: 40rpx;
+  /* border: 1px solid black; */
+  position: absolute;
+  right: 0;
+}

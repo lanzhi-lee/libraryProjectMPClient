@@ -1,0 +1,29 @@
+<!--pages/login/userprotocol/userprotocol.wxml-->
+<view class='body'>
+
+  <view class="weui-article">
+    <view class="weui-article__h1" style='font-weight: bold'>用户使用须知</view>
+    <view class="weui-article__section">
+      <view class="weui-article__section">
+        <view class="weui-article__p">
+          1. 本软件数据来自软件学院期末考试相关考务信息，方便师生查阅监考和考试安排。因权限受限，公共课部分数据缺失，使用如有误差请以教务科和学生科通知为准。 </view>
+
+        <view class="weui-article__p">
+          2. 本软件仅适用于主流安卓与苹果手机，软件可随微信小程序启动而自动运行，部分苹果手机有界面模糊现象，退出重新登陆即可。如果用户在安装本软件后因任何原因欲放弃使用，可删除本软件。 </view>
+
+        <view class="weui-article__p">
+
+          3. 本软件由软件学院GC工作室提供产品支持。作者保留为用户提供本软件的修改、升级版本的权利。
+        </view>
+
+        <view class="weui-article__p">
+          4. 本软件不含有任何旨在破坏用户计算机数据和获取用户隐私信息的恶意代码，不含有任何跟踪、监视用户计算机的功能代码，不会监控用户网上、网下的行为，不会收集用户使用其它软件、文档等个人信息，不会泄漏用户隐私。
+
+        </view>
+
+      </view>
+
+    </view>
+  </view>
+
+</view>
